@@ -1,0 +1,41 @@
+.el-menu{
+    border: none;
+}
+.el-menu--popup{
+    box-shadow: none;
+}
+.el-popper.is-light{
+    border: none;
+}
+.el-submenu__title{
+    text-align: left;
+}
+.el-menu-item{
+    text-align: left;
+}
+.el-menu--collapse{
+    width: .5rem;
+    .el-submenu__title{
+        padding: 0 0 0 .12rem !important;
+    }
+}
+
+.el-input__inner{
+    height: .35rem;
+    line-height: .35rem;
+}
+.el-cascader , .el-select{
+    width: 100%;
+}
+.el-message__icon{
+    font-size: .18rem;
+}
+.login{
+    .el-input__inner{
+        height: .45rem;
+        line-height: .45rem;
+    }
+    .el-input__icon{
+        line-height: .45rem;
+    }
+}

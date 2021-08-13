@@ -1,0 +1,266 @@
+/**
+ * @Description: 公共基础样式
+ * @Author: 胡梦蕾
+ * @Date: 2020-04-16 
+ * @LastEditTime: 2020-08-03
+ * @LastEditors: 胡梦蕾
+ */
+// 按设计稿900*3200来定义时： 1rem=10px;
+html,
+body {
+	width: 100%;
+	height: 100%;
+	font-family: "Microsoft YaHei";
+	font-size: 100px;  //1rem=100px
+}
+
+body,
+h1,
+h2,
+p,
+ul,
+ol,
+li {
+	margin: 0;
+	padding: 0;
+}
+
+small {
+	font-size: 12px;
+}
+
+/* 去除列表的原点 */
+ul,
+ol {
+	list-style: none;
+}
+
+/* 去除a标签默认的下划线 */
+a {
+	text-decoration: none;
+}
+
+:focus {
+	outline: 0;
+}
+
+li:hover,
+button:hover {
+	cursor: pointer;
+}
+
+button {
+	border: none;
+	font-size: 100%;
+	outline: none;
+	background: none;
+}
+
+/* 清除浮动 防止父级塌陷 */
+
+.clearfix:before,
+.clearfix:after {
+	content: " ";
+	display: table;
+}
+
+.clearfix:after {
+	clear: both;
+}
+input,
+textarea {
+	font-family: "Microsoft YaHei";
+}
+
+/*滚动条样式*/
+::-webkit-scrollbar {
+	width: 9px;
+	height: 9px;
+}
+
+::-webkit-scrollbar-thumb {
+	border: none;
+	border-radius: 5px;
+	/* box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2); */
+	background: #cccccc;
+}
+
+::-webkit-scrollbar-track {
+	border: none;
+	/* box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2); */
+	border-radius: 5px;
+	background: #eff1f2;
+}
+
+// 按钮的基本样式
+.btn {
+    height: .35rem;
+	min-width: .6rem;
+	color: #FFFCFC;
+	box-sizing: border-box;
+	font-size: .14rem;
+	background: $color-blue;
+	text-shadow: 0 0 1px #FFFCFC;
+	border-radius: .03rem;
+	&:hover{
+		background: rgba($color: $color-blue, $alpha: 0.9);
+	}
+}
+.btn-green{
+	background: $color-green;
+	&:hover{
+		background: rgba($color: $color-green, $alpha: 0.9);
+	}
+}
+.btn-simple{
+	background: unset;
+	color: $color-blue;
+	padding: 0 .05rem;
+	font-size: .12rem;
+	&:hover{
+		color: rgba($color: $color-blue, $alpha: 0.9);
+	}
+}
+.btn-icon{
+	height: 100%;
+	font-size: .22rem;
+	padding: 0;
+	color: #ffffff;
+}
+
+.btn-tool{
+	 background: rgba($color: $color-green, $alpha: 0.3);
+	 border: 1px solid $color-green;
+	 border-radius: .03rem;
+	 height: .25rem;
+	 font-size: .12rem;
+	 padding: 0 .05rem;
+	 color: $color-green2;
+	 &:hover{
+		 background: $color-green;
+		 color: #fff;
+	 }
+}
+.btn-tool-red{
+	background: rgba($color: $color-red, $alpha: 0.3);
+	border: 1px solid $color-red;
+	color: $color-red2;
+	&:hover{
+		background: $color-red;
+		color: #fff;
+	}
+}
+.btn-tool-orange{
+	background: rgba($color: $color-orange, $alpha: 0.3);
+	border: 1px solid $color-orange;
+	color: $color-orange2;
+	&:hover{
+		background: $color-orange;
+		color: #fff;
+	}
+}
+// 输入框的基本样式
+.input{
+    height: .35rem;
+    border: 1px solid #dcdfe6;
+    border-radius: .03rem;
+	box-sizing: border-box;
+	padding: 0 .15rem;
+	font-size: .14rem;
+	color: #1C1D1D;
+}
+input::-webkit-input-placeholder {
+	color: #aaaaaa;
+	letter-spacing: .01rem;
+}
+input::-moz-input-placeholder {
+	color: #aaaaaa;
+	letter-spacing: .01rem;
+}
+input::-ms-input-placeholder {
+	color: #aaaaaa;
+	letter-spacing: .01rem;
+}
+//卡片框基本样式
+
+// 弹出框的基本样式
+.shade {
+	z-index: 9999;
+	width: 100%;
+	height: 100%;
+	background: rgba($color: #000000, $alpha: 0.4);
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #000000;
+	.box {
+		position: absolute;
+		min-width: 5rem;
+		min-height: .5rem;
+		background: #ffffff;
+        box-shadow: 0 0 .05rem rgba(198, 205, 249, 0.47);
+		margin-bottom: 1rem;
+		&-title {
+			font-size: .2rem;
+			font-weight: normal;
+			color: #000000;
+		}
+	}
+	.top {
+		height: .5rem;
+		box-sizing: border-box;
+		padding: 0 .1rem 0 .2rem;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		.btn-icon {
+			color: #000;
+			font-size: 0.22rem;
+		}
+	}
+	
+	.content{
+		padding: 0 .4rem;
+		box-sizing: border-box;
+		width: 100%;
+	}
+}
+// 自定义表格的样式
+.table{
+	tr.header-class-name{
+		font-size: .22rem;
+        border-radius: .06rem;
+		font-weight: bold;
+        color: #FFFCFC;
+		background-color: #6AA0FB;
+		th{
+			padding: .2rem 0;
+			background-color: #6AA0FB;
+		}
+	}
+	.cell{
+		
+	}
+	.row-class-name{
+		background: none;
+		font-size: .2rem;
+		color: #1C1D1D;
+		text-shadow: 0 0 1px #1C1D1D;
+		&:hover>td{
+		  background: none!important;
+		}
+		>td{
+		  background: #FFFCFC;
+		  border: none!important;
+		  padding: .25rem 0;
+		}
+	  }
+	  
+	.row-class-name:nth-child(2n)>td{
+	  background: #F5F7FB;
+	}
+}
